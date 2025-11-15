@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Marty Müller</title>
+
+  <!-- p5.js and Matter.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.17.1/matter.min.js"></script>
+  
+  <!-- Your Sketch -->
+  <script src="sketch.js" defer></script>
+
+  <style>
+    body, html {
+      margin: 0; padding: 0; overflow: hidden;
+      background: white;
+      font-family: sans-serif;
+    }
+    #canvas-container {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+    }
+    canvas {
+      display: block;
+      position: absolute;
+      top: 0; left: 0;
+      z-index: 0;
+    }
+    .blob-link {
+      position: absolute;
+      background: #000bf3;
+      color: white;
+      padding: 6px 10px;
+      border-radius: 20px;
+      font-size: 14px;
+      text-decoration: none;
+      pointer-events: auto; /* Important for clicks */
+      user-select: none;
+      white-space: nowrap;
+      transform: translate(-50%, -50%);
+      transition: background 0.3s ease;
+      z-index: 1;
+    }
+    .blob-link:hover {
+      background: #2222ff;
+    }
+  </style>
+</head>
+<body>
+  <div id="canvas-container"></div>
+</body>
+</html>
